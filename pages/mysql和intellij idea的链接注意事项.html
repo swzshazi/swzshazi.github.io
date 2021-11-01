@@ -11,7 +11,20 @@
                     首先需要配置maven中的依赖项，即在pom.xls中配置添加mysql_connector_java.jar依赖库，具体添加方式略，
                     添加时库的详细信息可百度搜索“mvn仓库（或者Maven Central Repository Search）”，然后进入仓库搜索“mysql”即可，如下图所示。
                 </p>
-                <p> <img src="mvn.jpg" alt="mvn仓库搜索示意图" width="676" height="150"></p>
+                <p> <img src="../images/mvn.jpg" alt="mvn仓库搜索示意图" width="676" height="150"></p>
+            </li>
+            <li>
+                <p>
+                    当使用localhost登陆时，当前用户名可以用"select host, user from mysql.user;"命令查询，连接mysql时即采用查询到的用户名。值得注意的是输入的命令后面有一个“;”，不能省略。
+                    <ol>
+                        <li>首先，键盘输入"win+R"打开运行，输入"cmd"打开命令提示符。</li>
+                        <li>连接mysql</li>
+                        <li>
+                            <p>输入命令"select host, user from mysql.user;"如下图所示，此时红框内就是对应的用户名</p>
+                            <p><a href="../images/mysql_hostname.jpg"><img src="../images/mysql_hostname.jpg" alt="mysql用户名示意图" width="355" height="260"></a></p>
+                        </li>
+                    </ol>
+                </p>
             </li>
         </ol>
     </body>
