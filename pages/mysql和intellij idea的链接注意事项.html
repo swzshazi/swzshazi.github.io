@@ -26,6 +26,15 @@
                     </ol>
                 </p>
             </li>
+            <li>
+                <p>
+                    mysql操作命令中当涉及到表单名称时，需要加反引号将表单名称框出，以插入数据为例，如下所示，1中的写法就会报错，而2就会正确执行。
+                    <ol>
+                        <li>insert into table1 values(a, b, c, d);</li>
+                        <li>insert into `table1` values(a, b, c, d);</li>
+                    </ol>
+                </p>
+            </li>
         </ol>
     </body>
 </html>

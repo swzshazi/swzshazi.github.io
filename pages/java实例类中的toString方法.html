@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head><title>java实例类中的toString方法</title></head>
+    <body>
+        <h2>java实例类中的toString方法</h2>
+        <ol>
+            <li>
+                <p>
+                    在java中若一个类没有声明继承某个类，则其会默认继承Object类，而Object类中有一个toString方法。
+                    通过调用这个方法，可以返回一个十六进制的值，该值实际为该java对象的内存地址经过hash计算得出的值，可以等同看作该对象在堆中的内存地址。
+                </p>
+                <p>
+                    即当使用“System.out.println(SomeObject)”时，会输出类似“[[SomeObject@12345eab7”，对于一些实体类这显然是不合适的，例如矩阵类我们更希望返回一个矩阵而不是一串看不懂的数字。
+                    这就表示我们需要重写Object中的toString方法。
+                </p>
+            </li>
+            <li>
+                <p>
+                    重写时，直接在目标对象中重新定义toString方法即可，具体返回什么值完全自定即可，即可在print时打印出更加符合逻辑的值。
+                </p>
+            </li>
+            <li>
+                <p>
+                    在lombok插件中，使用@Data注解，可以达到相同的效果。
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>
